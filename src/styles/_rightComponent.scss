@@ -1,0 +1,135 @@
+@mixin lines {
+ height: 1px;
+ background-color: var(--line-color);
+ width: 100%;
+ margin: 14px 0 20px;
+}
+
+.overview {
+ width: 870px;
+ .overviewDescription {
+  border: 0.4px solid var(--border-color);
+  padding: 10px;
+  height: 300px;
+  border-radius: 8px;
+  & > * {
+   margin: 20px;
+  }
+  p {
+   font-size: 14px;
+  }
+  h1 {
+   font-size: 24px;
+  }
+  h2 {
+   font-size: 20px;
+  }
+  .line {
+   @include lines();
+  }
+ }
+ .searchContainer {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  .rightButtons {
+   display: flex;
+   margin-left: 10px;
+   button {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--btn-color);
+    border: 1px solid rgb(80, 80, 80);
+    color: white;
+    cursor: pointer;
+   }
+  }
+  input {
+   flex-grow: 1;
+   width: 400px;
+   height: 34px;
+   background-color: var(--input-color);
+   font-size: 14px;
+   font-weight: bold;
+   padding-left: 10px;
+   border: 1px solid var(--line-color);
+   border-radius: 4px;
+   color: white;
+  }
+  input:focus {
+   transition: width ease-out 0.3s;
+   box-shadow: 02px 2px 2px #58a6ff;
+  }
+ }
+ .repositories {
+  width: 100%;
+  h2 {
+   margin: 30px 0 10px;
+   font-size: 18px;
+   font-weight: 400;
+  }
+  .repositoriesContainer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   .repositoriesBox {
+    width: 45%;
+    height: 120px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .repositoriesTop {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     h3 {
+      color: var(--text-blue-color);
+      font-size: 20px;
+      font-weight: 600;
+     }
+     p {
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      padding: 2px 8px;
+      font-size: 12px;
+     }
+    }
+    .repositoriesDescription {
+     p {
+      font-size: 14px;
+      font-weight: thin;
+      color: rgb(214, 206, 206);
+     }
+    }
+    .repositoriesBottom {
+     display: flex;
+     justify-content: space-between;
+     p {
+      font-size: 14px;
+      font-weight: 600;
+      color: #d4dde8;
+      font-style: italic;
+     }
+     .date {
+      font-size: 12px;
+      color: #8b949e;
+      font-weight: 400;
+      font-style: italic;
+     }
+    }
+   }
+  }
+ }
+ @media only screen and (max-width: 768px) {
+  width: 100%;
+ }
+}
