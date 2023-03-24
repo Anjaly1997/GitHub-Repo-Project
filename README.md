@@ -31,4 +31,5 @@ Note: This project uses Vite as a development server, which offers fast and opti
 3. Add Pagination
 4. Add Filtering and sorting functionality
 5. reducing API request
-7. Increase the number of tests to increase test coverage and ensure functionality works as expected.
+7. Add tests to increase test coverage and ensure functionality works as expected.
+8. Add Documentation
