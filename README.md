@@ -1,7 +1,7 @@
 
 # GitHub Repositories with Search Functionality
 
-### This project is a web application built with React, TypeScript, and Vite that displays a list of GitHub repositories and allows users to search and filter repositories by name using a search bar. You can view a live demo of this project at https:/.
+### This project is a web application built with React, TypeScript, and Vite that displays a list of GitHub repositories and allows users to search and filter repositories by name using a search bar. You can view a live demo of this project at https://dulcet-mochi-7c5c3e.netlify.app/.
 
 
 
