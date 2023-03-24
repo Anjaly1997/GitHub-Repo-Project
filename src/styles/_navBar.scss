@@ -1,0 +1,136 @@
+// Variables
+$navbar-color: #24292e;
+$input-color: #fafbfc;
+$line-color: #d1d5da;
+// Media Queries
+$mobile-breakpoint: 600px;
+$tablet-breakpoint: 900px;
+// SCSS
+.navbar {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: var(--navbar-color);
+ color: white;
+ height: 60px;
+ padding: 2px 28px;
+ position: sticky;
+ top: 0;
+ .navLeft {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  img {
+   width: 40px;
+   object-fit: contain;
+  }
+  input {
+   width: 260px;
+   height: 34px;
+   background-color: var(--input-color);
+   margin-left: 10px;
+   font-size: 14px;
+   font-weight: bold;
+   padding-left: 10px;
+   border: 1px solid var(--line-color);
+   border-radius: 4px;
+  }
+  input:focus {
+   width: 600px;
+   transition: width ease-out 0.3s;
+  }
+ }
+ .navCenter {
+  display: none;
+  h2 {
+   font-size: 15px;
+   font-weight: 600;
+   margin: 0;
+  }
+ }
+ .navRight {
+  display: flex;
+  align-items: center;
+  width: 110px;
+  justify-content: space-between;
+  > * {
+   cursor: pointer;
+  }
+  img {
+   width: 20px;
+   object-fit: contain;
+   border-radius: 50%;
+  }
+  .navRightIcons {
+   display: flex;
+   align-items: center;
+  }
+ }
+ @media screen and (min-width: $mobile-breakpoint) {
+  .navLeft {
+   input {
+    width: 400px;
+   }
+  }
+  .navCenter {
+   display: flex;
+   flex: 1;
+   gap: 18px;
+   margin-left: 18px;
+   align-items: center;
+   color: white;
+  }
+ }
+ @media screen and (min-width: $tablet-breakpoint) {
+  .navLeft {
+   input {
+    width: 540px;
+   }
+  }
+  .navCenter {
+   h2 {
+    font-size: 16px;
+   }
+  }
+ }
+ // Mobile Menu Styles
+ .navMobileMenu {
+  background-color: var(--navbar-color);
+  position: fixed;
+  width: 100%;
+  top: 60px;
+  z-index: 10;
+  ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+  }
+  li {
+   padding: 10px;
+   border-bottom: 1px solid var(--line-color);
+   a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+   }
+  }
+ }
+ .menuIcon {
+  display: block;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-left: auto;
+ }
+ @media screen and (min-width: $mobile-breakpoint) {
+  .menuIcon {
+   display: none;
+  }
+  .navMobileMenu {
+   display: none;
+  }
+ }
+}
